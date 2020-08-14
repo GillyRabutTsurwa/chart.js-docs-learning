@@ -1,33 +1,15 @@
 const chart = document.getElementById("myFirstChart").getContext("2d");
 
 let myChart = new Chart(chart, {
-	// The type of chart we want to create
-	type: "line",
-
-	// The data for our dataset
+	type: "pie",
 	data: {
-		labels: [ "Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet" ],
+		labels: [ "Red", "Blue", "Yellow" ],
 		datasets: [
 			{
-				label: "My first dataset",
-				backgroundColor: "rgb(255, 99, 132)",
-				borderColor: "rgb(255, 99, 132)",
-				data: [ 0, 10, 5, 2, 20, 30, 45 ]
+				data: [ 10, 20, 30 ],
+				backgroundColor: [ "rgb(255, 99, 132)", "rgb(54, 162, 235)", "rgb(255, 206, 86)" ]
 			}
 		]
 	},
-
-	// Configuration options go here.
-	// So far, Sielewi chochote yenye ikuwayo hapa.
-	options: {
-		scales: {
-			yAxes: [
-				{
-					ticks: {
-						beginAtZero: true
-					}
-				}
-			]
-		}
-	}
+	options: {}
 });
