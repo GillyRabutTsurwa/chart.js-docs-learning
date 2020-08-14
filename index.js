@@ -1,33 +1,17 @@
 const chart = document.getElementById("myFirstChart").getContext("2d");
 
 let myChart = new Chart(chart, {
-	// The type of chart we want to create
 	type: "line",
-
-	// The data for our dataset
 	data: {
-		labels: [ "Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet" ],
+		labels: [ "Dogs", "Cats", "Pigs", "Donkeys", "Lions", "Hyenas", "Mice" ],
 		datasets: [
 			{
 				label: "My first dataset",
-				backgroundColor: "rgb(255, 99, 132)",
+				lineTension: 0, // delete this and the lines will go back to smooth
+				backgroundColor: "transparent",
 				borderColor: "rgb(255, 99, 132)",
-				data: [ 0, 10, 5, 2, 20, 30, 45 ]
+				data: [ 0, 10, 5, 2, 20, 30, 15 ]
 			}
 		]
-	},
-
-	// Configuration options go here.
-	// So far, Sielewi chochote yenye ikuwayo hapa.
-	options: {
-		scales: {
-			yAxes: [
-				{
-					ticks: {
-						beginAtZero: true
-					}
-				}
-			]
-		}
 	}
 });
