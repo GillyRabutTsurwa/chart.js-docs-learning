@@ -1,33 +1,24 @@
 const chart = document.getElementById("myFirstChart").getContext("2d");
 
 let myChart = new Chart(chart, {
-	// The type of chart we want to create
-	type: "line",
-
-	// The data for our dataset
+	type: "radar",
 	data: {
-		labels: [ "Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet" ],
+		labels: [ "Coding", "Designing", "Napping", "Running", "Driving", "Naturing" ],
 		datasets: [
 			{
-				label: "My first dataset",
-				backgroundColor: "rgb(255, 99, 132)",
-				borderColor: "rgb(255, 99, 132)",
-				data: [ 0, 10, 5, 2, 20, 30, 45 ]
+				data: [ 20, 17, 27, 5, 19, 22 ],
+				backgroundColor: [ "rgba(255, 99, 132, 0.4)" ]
 			}
 		]
 	},
-
-	// Configuration options go here.
-	// So far, Sielewi chochote yenye ikuwayo hapa.
 	options: {
-		scales: {
-			yAxes: [
-				{
-					ticks: {
-						beginAtZero: true
-					}
-				}
-			]
+		scale: {
+			ticks: {
+				//Lovely, we can make the start value to be 0
+				// and we can manually set the max (and not rely on our array), even though it gives us a nice estimate on where to set itself to make the data look nice. Nevertheless, we have more control
+				beginAtZero: true,
+				max: 30
+			}
 		}
 	}
 });
