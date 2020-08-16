@@ -11,5 +11,8 @@ let myChart = new Chart(chart, {
 			}
 		]
 	},
-	options: {}
+	options: {
+		// Main difference between doughnut and pie: cutOutPercentage
+		cutoutPercentage: 50
+	}
 });
