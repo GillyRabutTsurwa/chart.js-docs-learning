@@ -6,8 +6,9 @@ let myChart = new Chart(chart, {
 		labels: [ "Coding", "Designing", "Napping", "Running", "Driving", "Naturing" ],
 		datasets: [
 			{
+				label: "Gilbert",
 				data: [ 20, 17, 27, 5, 19, 22 ],
-				backgroundColor: [ "rgba(255, 99, 132, 0.4)" ]
+				backgroundColor: "rgba(255, 99, 132, 0.4)"
 			}
 		]
 	},
